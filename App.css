@@ -1,0 +1,244 @@
+/* General App Styles */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  padding: 20px;
+}
+
+/* Header and Current Time Styling */
+.header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.header h4 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.header h6 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
+  background-color: #007bff;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.5); /* Glowing effect for the current time */
+}
+
+/* Calendar Navigation Buttons with Glowing Blue Effect */
+.calendar-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+.calendar-navigation button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.calendar-navigation button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.6);
+}
+
+/* Calendar Grid Styling */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* 7 columns for each day of the week */
+  grid-gap: 10px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Calendar Day Styling */
+.calendar-day {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  min-height: 80px;
+  transition: box-shadow 0.3s;
+}
+
+.calendar-day:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Today Highlight */
+.today {
+  background-color: #bde0eb;
+  border: 2px solid #28a745;
+  border-radius: 5px;
+}
+
+/* Holiday Styling */
+.holiday {
+  background-color: #f9e79f;
+  color: #d35400;
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+/* Selected Day */
+.selected {
+  border: 2px solid #3498db;
+  background-color: #eaf4fb;
+  border-radius: 5px;
+}
+
+/* Events Styling */
+.events-list {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #2c3e50;
+}
+
+.events-list div {
+  margin: 3px 0;
+  background-color: #ecf0f1;
+  border-left: 5px solid #3498db;
+  padding: 3px;
+}
+
+/* Sticker Styling */
+.sticker {
+  margin: 2px 0;
+  font-size: 1.2em;
+  display: inline-block;
+}
+
+.sticker-context {
+  font-size: 0.9em;
+  color: #7f8c8d;
+  display: block;
+  margin-left: 5px;
+}
+
+/* Sidebar and Forms Styling */
+.main-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.sidebar {
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Forms for Adding Event and Sticker */
+.add-event-form, .sticker-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"], select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* Sidebar Form Buttons - Glowing Blue Effect */
+.add-event-form button, .sticker-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+.add-event-form button:hover, .sticker-form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 123, 255, 0.6);
+}
+
+.add-event-form button:active, .sticker-form button:active {
+  background-color: #004085;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.8);
+  transform: scale(0.98);
+}
+/* Delete Button - Glowing Red Effect */
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.2);
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(220, 53, 69, 0.6);
+}
+
+.delete-button:active {
+  background-color: #bd2130;
+  box-shadow: 0 4px 10px rgba(220, 53, 69, 0.8);
+  transform: scale(0.98);
+}
+
+/* Stickers and Events List */
+.stickers-list ul, .events-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.stickers-list li, .events-list li {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+/* Responsive Calendar Layout */
+@media (max-width: 768px) {
+  .calendar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
